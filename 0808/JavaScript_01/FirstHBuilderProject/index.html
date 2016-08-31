@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+		<style type="text/css">
+			h1{
+				color: red;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			//alert("head");
+		</script>
+		
+		<!--引用了外部的JS文件-->
+		<script src="js/myJS.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/string.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		
+		<h1>做人不能太霍顿</h1>
+		
+		<!--button 按钮标签-->
+		<!-- onclick属性 单击（点击鼠标左键） -->
+		<button onclick="changeColor()">切换颜色</button>
+		
+		<!--script  js代码片段-->
+		<script type="text/javascript">
+			
+			function changeColor () {
+				//获取h1标签
+				var h1 = document.getElementsByTagName("h1")[0];
+				//修改标签内容颜色
+				h1.style.color = "yellowgreen";
+			}
+			
+			//代码片段
+			//函数
+			function showMessage () {
+				//提示框（警告框）
+				//alert("点击了按钮");
+				console.log("点击了按钮");
+			}
+			
+			//提示框函数
+			//alert("JS脚本");
+			
+			//直接打印一段log
+			console.log("这是一个log输出日志");
+			
+			console.log("value的值是" + value);
+			
+		</script>
+		
+	</body>
+</html>

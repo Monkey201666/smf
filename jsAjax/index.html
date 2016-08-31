@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			//使用Ajax步骤：
+			//1.创建XMLHttpRequest对象
+			var xhr = new XMLHttpRequest();
+			
+			console.log(xhr.readyState);
+			//readystatechange       XMLHttpReqest对象状态改变回调事件
+			xhr.onreadystatechange = function () {
+				
+				if(xhr.readyState == 4){                          //4代表所有的数据都已经接收完成
+					//json格式字符串
+					//下载到数据后要解析数据
+					var date = JSON.parse(xhr.responseText);
+					console.log(date);					
+				}
+				if (xhr.readyState == 3) {
+					console.log(3);
+				}
+				if (xhr.readyState == 2) {
+					console.log(2);
+				}
+				if (xhr.readyState == 1) {
+					console.log(1);
+				}
+				if (xhr.readyState == 0) {
+					console.log(0);
+				}
+			}
+			
+			//2.设置网络请求，准备发起网络请求
+			//URL地址
+			var url = "http://lolbox.oss.aliyuncs.com/json/v3/news/newslist_99_1.json";
+			xhr.open("GET",url,true);             //false同步    true异步
+			//3.发起网络请求
+			xhr.send(null);
+			
+			
+			//将请求回的数据在控制台打印出来
+//			console.log(xhr.responseText);
+			
+		</script>
+		
+		
+		
+	</body>
+</html>
