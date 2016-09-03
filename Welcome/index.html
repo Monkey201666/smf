@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<style type="text/css">
+        #div1
+        {
+            width: 550px;
+            height: 180px;
+            background: bisque;
+            margin: 250px;
+            margin-left: 500px;
+            position: absolute;
+            overflow: hidden;
+        }
+        #div1 ul li
+        {
+            float: left;
+            width: 100px;
+            height: 150px;
+            /*margin-top: 20px;*/
+            margin-right: 5px;
+            background-color: gold;
+            list-style: none;
+        }
+        #div1 ul
+        {
+            width: 500px;
+            position: absolute;
+            padding: 0;
+        }
+    </style>
+	</head>
+	<body>
+		
+		<div id="div1">
+        <ul>
+           <li><img src="img/1.jpg"/ ></li>
+           <li><img src="img/2.jpg"/ ></li>
+           <li><img src="img/3.jpg"/ ></li>
+           <li><img src="img/4.jpg"/ ></li>
+           <li><img src="img/s.jpg"/ ></li>
+           <li><img src="img/m.jpg"/ ></li>
+           <li><img src="img/f.jpg"/></li>
+           <li><img src="img/7.jpg"/ ></li>
+           <li><img src="img/8.jpg"/ ></li>
+        </ul>
+    </div>
+		
+		<script type="text/javascript">
+        window.onload = function () {
+            var oul = document.getElementsByTagName('ul')[0];
+            var odiv = document.getElementById('div1');
+            var ali = document.getElementsByTagName('li');
+            oul.innerHTML = oul.innerHTML + oul.innerHTML;
+            oul.style.width = (ali[0].offsetWidth + 5) * ali.length + 'px';
+            function roll() {
+                if (oul.offsetLeft <= -oul.offsetWidth / 2) {
+                    oul.style.left = '0';
+                }
+                oul.style.left = oul.offsetLeft - 2 + 'px';
+            }
+            var timer = null;
+            timer = setInterval(roll, 30);
+            odiv.onmouseover = function () {
+                clearInterval(timer);
+            }
+            odiv.onmouseout = function () {
+                timer = setInterval(roll, 30);
+            }
+        };
+    </script>
+		
+		
+		
+		
+	</body>
+</html>
