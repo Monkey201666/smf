@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div_1{
+				width: 100px;
+				height: 100px;
+				background-color: chartreuse;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="div_1"></div>
+		
+		<script type="text/javascript">
+		
+			window.onload = document.getElementById("div_1");
+			
+			var disX = 0;
+			var disY = 0;
+			oDiv.onmousedown = function (ev) {             //鼠标按下的时候获取鼠标的位置
+				
+				var oEvent = ev ||event;
+				disX = oEvent.clientX - oDiv.offsetLeft;   //disX:鼠标距离div左边的距离
+				disY = oEvent.clientY - oDiv.offsetTop;    //disY:鼠标距离div上边的距离
+			}
+			
+			o.Div.onmousemove = function (ev) {
+				
+				oDiv.style.left = oEven.clientX - disX + "px";
+				oDiv.style.top = oEven.clientY - disY + "px";
+				
+			}
+			
+		</script>
+		
+		
+		
+	</body>
+</html>

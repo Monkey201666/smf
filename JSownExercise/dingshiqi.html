@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--<script type="text/javascript">
+			
+			var i = 0;
+			
+			function run () {
+				console.log(i ++);
+			}
+			
+			setInterval(run,1000);  //间隔某个时间循环执行函数 参数1：执行函数（也可以是一段JavaScript代码）
+			                                                //参数2：时间间隔	
+		</script>-->
+		
+		
+		
+		
+		<button>开始</button>
+		<button>结束</button>
+		
+		<!--<script type="text/javascript">
+			var i = 0;
+			function run () {
+				console.log(i ++);
+			}
+			
+			var timer = null;   //定时器对象
+			document.querySelectorAll("button")[0].onclick = function () {
+				//开启定时器
+				timer = setInterval(run,1000);          
+			}
+			document.querySelectorAll("button")[1].onclick = function () {
+				//终止定时器
+				clearInterval(timer);
+			}
+		</script>-->
+		
+		
+		<button>开始2</button>
+		<button>结束2</button>
+		
+		<script type="text/javascript">
+			
+			var i = 0;
+			function run() {
+				console.log(i ++);
+			}
+			
+			var timer2 = null;
+			document.querySelectorAll("button")[2].onclick = function () {
+				
+				timer2 = setTimeout(run,1000);                 //延迟某个时间执行某个函数
+			}
+			document.querySelectorAll("button")[3].onclick = function () {
+				
+				clearTimeout(timer2);
+			}
+			
+		</script>
+		
+	</body>
+</html>

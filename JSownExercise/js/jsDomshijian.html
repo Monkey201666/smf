@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<h1 onclick="this.innerHTML = '哈喽！'">点击该文本</h1>
+	
+		<h2 onclick="changetext(this)">再点击该文本！</h2>
+		
+		<script type="text/javascript">
+			
+			function changetext (id) {
+				id.innerHTML = "哈喽哈喽！";
+			}
+			
+		</script>
+		
+		
+		<button onclick="displayDate()">点击</button>   
+		
+		<p id="demo"></p>
+		
+		<script type="text/javascript">
+			
+			function displayDate () {
+				document.getElementById("demo").innerHTML = Date();
+			}
+		
+		</script>
+		
+		
+		
+		
+	</body>
+</html>

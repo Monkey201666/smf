@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">                 //1.显示信息的命令
+			
+			console.log('Hello');
+			console.log("Hello");
+			console.log("信息");
+			console.log("错误");
+			console.log("警告");
+			
+		</script>
+		
+		<script type="text/javascript">                  //2.占位符
+			
+			console.log("%d年%d月%d日",2016,8,23);
+			
+		</script>
+		
+		
+		<script type="text/javascript">                   //3.信息分组
+		
+			console.group("第一组信息");
+				console.log("第一组第一条信息");
+				console.log("第一组第二条信息");
+			console.groupEnd();
+			
+			console.group("第二组信息");
+				console.log("第二组第一条信息");
+				console.log("第二组第二条信息");
+			console.groupEnd();
+			
+		</script>
+		
+		
+		<script type="text/javascript">                     //4.查看对象的信息
+			
+			//console.info(); 可以显示一个对象所有的属性和方法
+			
+			var  info = {
+				blog:"http://user.qzone.qq.com/793774323/infocenter?ptsig=3-7pSMjWvA*S6oBskTlLuU3cSpSTU644BeAekvNb4SU_",
+				QQGroup:12345678,
+				message:"今天天好热！"
+			}
+			
+			console.dir(info);
+		
+		</script>
+		
+		
+		<div id="info">                             <!--5.console.dirxml()用来显示某个节点（node）所包含的html/xml代码-->
+			<h3>百度：www.baidu.com</h3>
+			<p>程序猿</p>
+		</div>
+		
+		<script type="text/javascript">
+			
+			var info = document.getElementById("info");
+			
+			console.dirxml(info);
+			
+		</script>
+		
+		
+		
+		<script type="text/javascript">          //6.console.assert()用来判断一个表达式或变量是否为真，
+		                                         //如果结果为否，则在控制台输出一条相应信息，并抛出一个异常
+			                                     
+			var result = 1;
+			console.assert(result);
+			
+			var year = 2016;
+			console.assert(year == 2018);        //1是非0值，是真；而第二个
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

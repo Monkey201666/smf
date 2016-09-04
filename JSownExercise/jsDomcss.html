@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p1">Hello,world!</p>
+		<h1 id="h1">今天不爽！</h1>
+		<span id="span_1">今日头条：孙敏芳备胎方湘出轨刘霞</span>
+		<img id="img_1" src="img/cattoon.jpg"/>
+	
+		<script type="text/javascript">
+			document.write(Date());                                      //当前时间 
+		</script>
+		
+		
+		<script type="text/javascript">
+			document.getElementById("p1").innerHTML = "I am fine!"       //改变Html内容
+		</script>
+		
+		
+		<script type="text/javascript">
+			var element = document.getElementById("h1");
+			element.innerHTML = "好好学习，天天向上！"                         //改变Html内容
+		</script>
+		
+		
+		<script type="text/javascript">
+			document.getElementById("img_1").src = "img/monkey.jpg";      //改变Html属性
+		</script>
+		
+		
+		<script type="text/javascript">
+			document.getElementById("span_1").style.color = "blueviolet";
+			document.getElementById("span_1").style.fontFamily = "微软雅黑";
+			document.getElementById("span_1").style.fontSize = "200%";
+		</script>
+		
+		
+		<script type="text/javascript">
+			document.getElementById("bt1")
+		</script>
+		
+		
+		<h2 id="h2">颜色变变变！</h2>
+		<button type="button" onclick="document.getElementById('h2').style.color = 'blue'">点我变色</button>
+		
+		
+		<p id="p2">这是一段文本，可以隐藏和显示的文本，不信点点下面的按钮吧！</p>
+		<input type="button" id="i_1" value="隐藏文本" 
+			onclick="document.getElementById('p2').style.visibility = 'hidden'" />
+		<input type="button" id="i_1" value="显示文本"
+			onclick="document.getElementById('p2').style.visibility = 'visible'" />
+		
+		
+	</body>
+</html>

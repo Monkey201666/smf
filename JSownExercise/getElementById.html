@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	
+	<body>
+		
+		<h1 id="myheader" onclick = "getValue()">这是标题</h1>
+		<p>点击标题，会提示出它的值</p>
+		
+		<script type="text/javascript">
+			
+			function getValue () {
+				
+				var x = document.getElementById("myheader");             //需要查找文档中某一特定元素最有效的方法getElementById()
+				
+//				alert(x.innerHTML);
+				alert("恭喜你，你已经学会了getElementById查找元素方法");
+				
+			}
+	
+		</script>
+		
+			<h2 name="title" onclick="getVal()">this is title!</h2>
+			
+			<script type="text/javascript">
+				
+				function getVal() {
+					
+					var val = document.getElementsByName("title");
+					
+					alert("getElementByName查找元素的方法");
+					
+				}
+				
+			</script>
+		
+		
+			<span onclick="span()">学习查找元素方法</span>
+		
+			<script type="text/javascript">
+				
+				function span() {
+					
+					var s = document.getElementsByTagName("span");
+//					alert(s.length);
+					alert("How are you!")
+
+				}
+					
+			</script>
+		
+			<script type="text/javascript">
+				
+				document.write("可用宽度：" + screen.availWidth);
+				
+			</script>
+		
+		
+		
+		
+	</body>
+</html>

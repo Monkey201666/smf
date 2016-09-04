@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<p id="demo"></p>
+		
+		<script type="text/javascript">                        //获取浏览器窗口的尺寸
+			
+			var w = window.innerWidth                          //浏览器窗口的内部宽度
+			|| document.documentElement.clientWidth            
+			|| document.body.clientWidth;
+			
+			var h = window.innerHeight                         //浏览器窗口的内部高度
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+			
+			x = document.getElementById("demo");
+			x.innerHTML = "浏览器的内部窗口宽度：" + w + ",高度：" +h;		
+			
+		</script>
+		
+		<script type="text/javascript">
+				
+				//screen.availHeight属性返回访问者屏幕的高度，以像素计，减去界面特性，比如窗口任务栏。
+				//screen.availWidth
+				document.write("可用宽度：" + screen.availWidth + "<br/>");
+				
+		</script>
+		
+		
+		<script type="text/javascript">        //window location  用于获得当前页面的地址（URL），并把浏览器重定向到新的页面
+			
+			document.write(location.href + "<br/>");     //返回当前页面的URL
+			document.write("返回web主机的域名 ： " +location.hostname +  "<br/>");
+			document.write("返回当前页面的路径和文件名 ： " + location.pathname + "<br/>");
+			document.write("返回web主机的端口 ：" +location.port +  "<br/>");
+			document.write("返回所使用的web协议 ： " +location.protocol + "<br/>");
+			document.write(location.pathname + "<br/>");    //返回当前的URL路径
+			
+		</script>
+		
+		<input type="button" value="加载新文档" onclick="newDoc()"/>
+		
+		<script type="text/javascript">      //location.assign() 加载新的文档
+			
+			function newDoc () {
+				window.location.assign("https://www.baidu.com");
+			}
+
+		</script>
+		
+		
+		<input type="button" value="警告框" onclick="sAlt()"/>           
+		<script type="text/javascript">                                 
+			function sAlt () {
+				alert("你被警告了！");                               //警告框
+			}
+		</script>
+		
+		
+		<input type="button" value="提示框" onclick="sCom()"/>           
+		<script type="text/javascript">
+			function sCom () {
+				var name = prompt("请输入你的名字","孙敏芳");              //提示框
+				if(name != null && name != ""){
+					document.write("你好！" + name + "How are you?");
+				}
+			}
+			
+		</script>
+		
+		
+		<input type="button" value="折行警告框" onclick="sZhehang()"/>           
+		<script type="text/javascript">                                         //折行
+			
+			function sZhehang () {
+				alert("尊敬的用户 ，你好!" + '\n' + "欢迎使用带有折行的警告框！");
+			}
+				
+		</script>
+		
+		
+		<input type="button" value="确认框" onclick="sCom()"/>
+		
+		<script type="text/javascript">                               //确认框
+			
+			function sCom() {
+				var c = confirm("press a button");
+				if(c = true){
+					alert("You pressed OK!");
+				}else{
+					alert("You pressed Cancel");
+				}
+			}
+			
+		</script>
+
+	</body>
+</html>
+
+
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input{
+				width: 200px;
+				height: 40px;
+				background-color: aliceblue;
+				font-size: larger;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<input type="text" placeholder="请输入邮箱！"/>
+
+		
+		<script type="text/javascript">
+			
+			document.querySelector("input").onblur = function () {
+			
+				var reg = /^\w+@[\da-zA-z]+(\.[\da-zA-z]+)+$/;
+				
+				var str = document.querySelector("input").value;
+				
+				if (reg.test(str)) {
+					alert("This is an email!");
+				} else{
+					alert("This is not an email!");
+					var input=document.querySelector("input");
+					input.value ="";
+					str=null;
+				}
+			}
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
